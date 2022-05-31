@@ -1,10 +1,9 @@
 // process.env.PORT и process.env.BASE_URL берутся из файла .env
-
 module.exports = {
   // Указываем порт, на котором будет работать приложение.
   server: {
     port: process.env.PORT,
-    host: "localhost",
+    host: 'localhost',
   },
 
   // Передаём во фронт данные из .env. Эта переменная будет доступна через process.env.baseUrl.
@@ -22,7 +21,15 @@ module.exports = {
       { name: "theme-color", content: "#000000" },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", href: "/favicon.ico", type: "image/x-icon" }],
+    link: [
+      { rel: "icon", href: "/favicon.png", type: "image/png", sizes: "96x96" },
+      {
+        rel:"stylesheet",
+        href:"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css",
+        integrity:"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
+        crossorigin:"anonymous",
+      },
+    ],
   },
 
   // Включаем автоматическое подключение компонентов.
